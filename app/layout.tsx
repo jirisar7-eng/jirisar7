@@ -16,7 +16,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="cs">
-      <body className={inter.className}>{children}</body>
+      <head>
+        {/* Přímé vstříknutí Tailwindu pro okamžitou opravu náhledu */}
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  ubuntu: { orange: '#e95420', aubergine: '#772953', dark: '#300a24' }
+                },
+                borderRadius: { 'apple': '2.5rem' }
+              }
+            }
+          }
+        `}} />
+      </head>
+      <body className={`${inter.className} bg-[#300a24] antialiased`}>{children}</body>
     </html>
   )
 }
