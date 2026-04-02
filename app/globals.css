@@ -11,6 +11,12 @@
   --color-synthesis-success: #34C759;
   --color-synthesis-warning: #FF9500;
   --color-synthesis-error: #FF3B30;
+
+  --color-ubuntu-orange: #e95420;
+  --color-ubuntu-aubergine: #772953;
+  --color-ubuntu-dark: #300a24;
+  
+  --radius-apple: 2.5rem;
 }
 
 @layer base {
